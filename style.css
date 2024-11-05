@@ -1,0 +1,190 @@
+/* Reset margins and paddings for better consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Container for the entire dashboard */
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slight zoom effect when hovering over the container */
+}
+
+/* Header styling */
+header h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Section for adding a new task */
+#task-input {
+    margin-bottom: 30px;
+}
+
+#task-input input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#task-input input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#task-input button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#task-input button:hover {
+    background-color: #0056b3;
+}
+
+/* Task list section */
+#task-list {
+    margin-top: 30px;
+}
+
+#task-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 4px;
+}
+
+.task-item:hover {
+    background-color: #f1f1f1;
+}
+
+.task-item button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.task-item button:hover {
+    background-color: #218838;
+}
+
+/* Task status styling */
+.task-status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.status-pending {
+    background-color: #ffeb3b;
+    color: #333;
+}
+
+.status-pending:hover {
+    background-color: #fdd835;
+}
+
+.status-inprogress {
+    background-color: #2196f3;
+    color: white;
+}
+
+.status-inprogress:hover {
+    background-color: #1976d2;
+}
+
+.status-completed {
+    background-color: #4caf50;
+    color: white;
+}
+
+.status-completed:hover {
+    background-color: #388e3c;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #task-input input {
+        width: 70%;
+    }
+
+    #task-input button {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #task-input input {
+        width: 60%;
+    }
+
+    #task-input button {
+        width: 35%;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .task-item button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Project Management Dashboard</h1>
+        </header>
+
+        <!-- Task Input Section -->
+        <section id="task-input">
+            <h2>Add a New Task</h2>
+            <input type="text" id="task-name" placeholder="Enter task name">
+            <button onclick="addTask()">Add Task</button>
+        </section>
+
+        <!-- Task List Section -->
+        <section id="task-list">
+            <h2>Tasks</h2>
+            <ul id="task-ul">
+                <!-- Tasks will be displayed here -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
